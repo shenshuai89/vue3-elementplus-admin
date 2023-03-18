@@ -46,11 +46,31 @@
 
 <script setup lang="ts">
 import * as echarts from "echarts/core";
+import { BarSeriesOption, LineSeriesOption } from "echarts";
+import type { ComposeOption } from "echarts";
+import type {
+  TitleComponentOption,
+  TooltipComponentOption,
+  GridComponentOption,
+  XAXisComponentOption,
+  YAXisComponentOption,
+} from "echarts";
+
 import BarChart from "./components/BarChart.vue";
 import LineChart from "./components/LineChart.vue";
 import LineChartJson from "./components/LineChartJson.vue";
 import PieChart from "./components/PieChart.vue";
-const lineData1 = {
+type ECOption = ComposeOption<
+  | TitleComponentOption
+  | TooltipComponentOption
+  | GridComponentOption
+  | XAXisComponentOption
+  | YAXisComponentOption
+  | BarSeriesOption
+  | LineSeriesOption
+>;
+
+const lineData1: ECOption = {
   title: {
     text: "Line",
   },
@@ -95,7 +115,7 @@ const lineData1 = {
     },
   ],
 };
-const lineData2 = {
+const lineData2: ECOption = {
   color: ["#80FFA5", "#00DDFF", "#37A2FF", "#FF0087", "#FFBF00"],
   // title: {
   //   text: "Gradient Stacked Area Chart",
@@ -500,7 +520,7 @@ const barData3 = {
       name: "降水",
       type: "bar",
       tooltip: {
-        valueFormatter: function (value:any) {
+        valueFormatter: function (value: any) {
           return value + " ml";
         },
       },
@@ -513,7 +533,7 @@ const barData3 = {
       type: "line",
       yAxisIndex: 1,
       tooltip: {
-        valueFormatter: function (value:any) {
+        valueFormatter: function (value: any) {
           return value + " °C";
         },
       },

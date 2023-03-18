@@ -30,6 +30,7 @@
     "@types/node": "^18.14.1",
     "@types/nprogress": "^0.2.0",
     "@types/three": "^0.149.0",
+    "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "echarts": "^5.4.1",
     "json-server": "^0.17.1",
