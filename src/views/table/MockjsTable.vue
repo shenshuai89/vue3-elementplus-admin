@@ -40,7 +40,6 @@ const tableData = reactive({
 });
 onMounted(async () => {
   const res = await getTableList();
-  console.log(res, 'res');
   if (res.code === '0') {
     tableData.list = res.data.items;
   }
