@@ -47,7 +47,7 @@ scene.add(pointLightHelper);
 
 // 创建渲染器对象
 const renderer = new THREE.WebGLRenderer({
-  antialias: true,
+  antialias: true, // 抗锯齿
   // alpha:true
 });
 renderer.setClearAlpha(0);
