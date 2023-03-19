@@ -78,6 +78,15 @@ export const constantRoutes: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/threejs",
+        component: () => import("@/views/threejs/index.vue"),
+        name: "Threejs",
+        meta: {
+          title: "Three示例",
+          icon: "VideoCameraFilled",
+        },
+      },
+      {
         path: "/form",
         component: () => import("@/views/form/index.vue"),
         name: "Form",
