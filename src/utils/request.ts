@@ -9,6 +9,12 @@ import {
 } from "./auth";
 import store from "@/store";
 
+declare module 'axios' {
+  interface AxiosInstance {
+    (config: AxiosRequestConfig) : Promise<any>;
+  }
+}
+
 const service = axios.create({
   // baseURL: import.meta.env.VITE_BASE_API || "/", //请求接口是否加前缀
   timeout: 10000, // request timeout
