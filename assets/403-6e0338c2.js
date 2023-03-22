@@ -1,0 +1,1 @@
+import{_ as e}from"./index-61e62b51.js";import{m as r,l as s}from"./vue-12cb0627.js";import"./element-plus-06751a6d.js";const t=e({},[["render",function(e,t){return s(),r("div",null,"403 登录了，但是权限不够")}]]);export{t as default};
