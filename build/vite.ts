@@ -3,7 +3,7 @@ export function createProxy(
   mode: Record<string, string>
 ): Record<string, ProxyOptions> {
   let mainProxy: any = {};
-  const proxyUrl = mode.VITE_API_HOST || "https://ng.peoplus.cn:8888/";
+  const proxyUrl = mode.VITE_API_HOST || "https://shenshuai.me";
   const isPreview = mode.command === "preview";
   if (isPreview) {
     mainProxy["/peoplusPro/api"] = {

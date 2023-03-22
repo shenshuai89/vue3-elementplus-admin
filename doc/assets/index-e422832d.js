@@ -1,0 +1,1 @@
+import{_ as e}from"./index-9d474f6a.js";import{m as r,l as n}from"./vue-12cb0627.js";import"./element-plus-06751a6d.js";const s=e({},[["render",function(e,s){return n(),r("div",null,"menu1-2-2")}]]);export{s as default};

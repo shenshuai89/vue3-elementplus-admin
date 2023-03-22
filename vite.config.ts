@@ -37,6 +37,7 @@ export default defineConfig(
     },
     build: {
       // sourcemap: true,
+      outDir: "doc",
       manifest: true,
       minify: "terser",
       chunkSizeWarningLimit: 1000, // 提高静态资源大小警告

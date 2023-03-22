@@ -29,7 +29,7 @@ const data = Array(10000)
     return { index: i };
   });
 // 获取dom节点
-const box = ref(null);
+const box = ref<HTMLElement>();
 // 所有数据展示完全需要的高度
 const boxHeight = computed(() => data.length * rowHeight);
 // 能够展示出来的数据
@@ -42,10 +42,10 @@ const offsetData = computed(() => {
 const offsetIndex = computed(() => Math.floor(offset.value / rowHeight));
 onMounted(() => {
   // console.log(getCurrentInstance().refs.box)
-  box.value.addEventListener(
+  box.value && box.value.addEventListener(
     'scroll',
     () => {
-      offset.value = box.value.scrollTop;
+      offset.value = box.value!.scrollTop;
       console.log(offset.value);
     },
     false

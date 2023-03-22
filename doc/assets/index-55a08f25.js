@@ -1,0 +1,1 @@
+import{J as a,e as s,m as e,X as t,l as o,aD as n,ag as m}from"./vue-12cb0627.js";const r={class:"home"},l=a({__name:"index",setup:a=>(s((()=>n().path)),(a,s)=>{const n=m("el-skeleton");return o(),e("div",r,[t(n,{rows:5,animated:""})])})});export{l as default};
