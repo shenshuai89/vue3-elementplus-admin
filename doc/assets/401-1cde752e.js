@@ -1,1 +1,0 @@
-import{_ as e}from"./index-9d474f6a.js";import{m as r,l as s}from"./vue-12cb0627.js";import"./element-plus-06751a6d.js";const t=e({},[["render",function(e,t){return s(),r("div",null,"401 未登录，请先进行登录")}]]);export{t as default};
