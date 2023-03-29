@@ -36,6 +36,7 @@
   height: 400px;
   background-color: #67bfeb;
 }
+// 进行整体的倾斜旋转
 .stage {
   transform: rotateX(73deg) rotateY(90deg);
   position: relative;
@@ -57,18 +58,20 @@
    设置stage旋转的中心点，transform-origin为stage的一半
 */
 .ball_container {
-  /* transform-origin设置旋转变化的中心点 */
+  /* transform-origin设置旋转变化的中心点，小球公转的中心点 */
   transform-origin: 225px 225px;
   position: absolute;
-  width: 300px; // width值越小，小球围起来的半径越大
-  // height: 300px;
-  //   background-color: #fffcd0;
+  width: 1100px; //900和450的大小一样，【超过900，值越大，半径越大】 【值小于450，width值越小，小球围起来的半径越大，当为0时，和1350效果一样】
+  // height: 100px;
+  // color: #5e3397;
+  // border: solid 1px #5e3397;
 }
 .ball {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   transition: all 2s ease-out 0ms;
+  // 小球自转的中心点
   transform-origin: 50% 50%;
   position: absolute;
   /* 
@@ -173,6 +176,7 @@
     transform: rotateX(73deg) rotateY(-0deg) rotateZ(-360deg);
   }
 }
+/* 图片小球绕自身Y轴旋转 */
 @keyframes cir1 {
   0% {
     transform: rotateY(0deg) rotateZ(10deg);
